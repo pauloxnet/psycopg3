@@ -441,7 +441,7 @@ def test_minus_minus_quote(conn, pgtype):
 def test_specialised_load(conn, val):
     # This test tests an implementation detail:
     # should it change it is expected to break.
-    if psycopg3.pq.__impl__ != 'ctypes':
+    if psycopg3.pq.__impl__ != "ctypes":
         pytest.skip("testing a ctypes implementation detail")
 
     cur = conn.cursor()
